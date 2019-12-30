@@ -14,5 +14,5 @@ title = soup.find(id="productTitle")
 
 print(title)
 
-#minute 5:40
+
 
