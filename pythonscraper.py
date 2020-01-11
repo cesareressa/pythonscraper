@@ -11,8 +11,11 @@ page = requests.get(URL, headers=headers)
 soup = BeautifulSoup(page.content, 'html.parser')
 
 title = soup.find(id="productTitle") 
+price = soup.find(id="priceblock_ourprice").get_text()
+converted_price = price[0:8] #8 digits, it prints the first 8 digits, including euro symbol
 
 print(title)
+print(converted_price)
 
 
 
